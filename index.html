@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Софья Сащихина | Верстальщик и дизайнер публикаций</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --dark: #2F2E41;
+            --light: #F9F9F9;
+            --gray: #E5E5E5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 6rem 2rem 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #5a52e0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2 i {
+            margin-right: 1rem;
+            color: var(--primary);
+        }
+        
+        .education {
+            margin-top: 2rem;
+        }
+        
+        .education h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .education ul {
+            list-style: none;
+        }
+        
+        .education li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .education li:before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -3px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .skill {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: var(--primary);
+            border-radius: 4px;
+            margin-top: 0.5rem;
+        }
+        
+        .portfolio-container {
+            text-align: center;
+            margin-top: 3rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .portfolio-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .portfolio-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--dark);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+                padding: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            section {
+                padding: 5rem 1rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка с меню -->
+    <header>
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#portfolio">Портфолио</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+ 
+    <!-- Герой-секция -->
+    <section class="hero">
+        <h1>Софья Сащихина</h1>
+        <p>Специалист по верстке и подготовке изданий</p>
+        <a href="#portfolio" class="btn">Мое портфолио</a>
+    </section>
+ 
+    <!-- Обо мне -->
+    <section id="about">
+        <h2><i class="fas fa-user"></i> Обо мне</h2>
+        <p>Привет! Я Софья, 20 лет, из Москвы. Специализируюсь на подготовке изданий к печати и электронной публикации. Занимаюсь качественным набором текста, владею современными инструментами редактирования и типографской верстки. Постоянно развиваюсь, изучаю новые инструменты и методики, повышая качество своей работы.</p>
+        <div class="education">
+            <h3>Образование</h3>
+            <ul>
+                <li><strong>Московский техникум креативных индустрий им. Л.Б. Красина</strong><br>Оператор электронного набора и верстки (2023-2024, с отличием)</li>
+                <li><strong>РГГУ</strong><br>Социальные, политические и управленческие технологии (2024-2028)</li>
+            </ul>
+        </div>
+    </section>
+ 
+    <!-- Профессиональные навыки -->
+    <section id="skills">
+        <h2><i class="fas fa-code"></i> Профессиональные навыки</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <h3>Adobe InDesign</h3>
+                <p>Профессиональная верстка многостраничных документов</p>
+                <div class="progress-bar" style="width: 95%"></div>
+            </div>
+            <div class="skill">
+                <h3>Adobe Photoshop</h3>
+                <p>Обработка изображений для печати и веба</p>
+                <div class="progress-bar" style="width: 85%"></div>
+            </div>
+            <div class="skill">
+                <h3>Adobe Illustrator</h3>
+                <p>Создание векторной графики и инфографики</p>
+                <div class="progress-bar" style="width: 80%"></div>
+            </div>
+            <div class="skill">
+                <h3>Подготовка к печати</h3>
+                <p>Знание требований к макетам для типографий</p>
+                <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <div class="skill">
+                <h3>Электронные публикации</h3>
+                <p>Создание интерактивных PDF и EPUB</p>
+                <div class="progress-bar" style="width: 75%"></div>
+            </div>
+            <div class="skill">
+                <h3>Корректура</h3>
+                <p>Работа с текстом, вычитка и редактура</p>
+                <div class="progress-bar" style="width: 85%"></div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Портфолио -->
+    <section id="portfolio">
+        <h2><i class="fas fa-briefcase"></i> Портфолио</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-icon">
+                <i class="fas fa-folder-open"></i>
+            </div>
+            <h3>Мои работы</h3>
+            <p class="portfolio-description">
+                Все мои проекты по верстке, дизайну и подготовке публикаций доступны в моем Google Drive. Там вы найдете примеры журналов, книг, брошюр и другой полиграфической продукции.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1fCbwp7ZZnM_jhRNJhIiTmkH2Ecer48Rd" class="btn" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Открыть портфолио
+            </a>
+        </div>
+    </section>
+ 
+    <!-- Контакты -->
+    <section id="contacts">
+        <h2><i class="fas fa-envelope"></i> Контакты</h2>
+        <div style="background: white; padding: 2rem; border-radius: 8px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <ul style="list-style: none; font-size: 1.2rem;">
+                <li style="margin-bottom: 1rem;"><i class="fas fa-envelope" style="color: var(--primary); width: 30px;"></i> <a href="mailto:sofi13610@mail.ru" style="color: var(--dark); text-decoration: none;">sofi13610@mail.ru</a></li>
+                <li style="margin-bottom: 1rem;"><i class="fas fa-phone" style="color: var(--primary); width: 30px;"></i> <a href="tel:+79167923204" style="color: var(--dark); text-decoration: none;">+7 (916) 792-32-04</a></li>
+                <li><i class="fas fa-map-marker-alt" style="color: var(--primary); width: 30px;"></i> Москва, Россия</li>
+            </ul>
+        </div>
+    </section>
+ 
+    <footer>
+        <p>© 2024 Софья Сащихина. Все права защищены.</p>
+    </footer>
+</body>
+</html>
